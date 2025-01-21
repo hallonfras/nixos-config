@@ -1,0 +1,52 @@
+@use 'colors.scss' as *;
+
+$fg-color: $base05;
+$bg-color: $base00;
+
+
+
+window.Bar {
+    font-family: "Iosevka";
+    font-size: 13px;
+
+    background: transparent;
+    color: $fg-color;
+    font-weight: bold;
+    margin: 0px;
+
+    active-window {
+        font-weight: bold;
+    }
+
+    centerbox {
+        background: $bg-color;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 6px 8px 6px 8px;
+    }
+
+    button {
+        border-radius: 8px;
+        margin: 2px;
+    }
+
+    items-right {
+        * {
+            padding: 0px 5px 0px 5px;
+        }
+    }
+
+    battery {
+        color: $base0E; 
+    }
+
+    workspaces {
+        label {
+            margin: 0 8px 0 8px;
+        }
+
+        .active {
+            color: $base0B;
+        }
+    }
+}
