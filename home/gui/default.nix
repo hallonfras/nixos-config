@@ -23,9 +23,6 @@
 
     # Video player
     mpv
-
-    # Goldwarden
-    goldwarden
   ];
 
   # GTK Settings
