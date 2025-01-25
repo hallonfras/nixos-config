@@ -25,6 +25,9 @@
 
     # Power monitor
     upower
+
+    # Disk imager
+    caligula
   ];
 
   programs.git = {
