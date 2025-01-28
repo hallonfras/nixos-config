@@ -5,7 +5,9 @@
 }: {
   programs.dconf.enable = true;
 
-  users.users.isaac.extraGroups = ["libvirtd" "kvm"];
+  users.users.isaac.extraGroups = ["libvirtd" "kvm" "vboxusers"];
+
+  virtualisation.virtualbox.host.enable = true;
 
   environment.systemPackages = with pkgs; [
     virt-manager
