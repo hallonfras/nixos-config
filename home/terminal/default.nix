@@ -20,11 +20,17 @@
     typstyle
     typst-live
 
+    # Python formatter
+    black
+
     # Terminal emulator
     unstable.ghostty
 
     # Power monitor
     upower
+
+    # Network diagnostic tool (for bachelors thesis)
+    tcpdump
 
     # Disk imager
     caligula
@@ -131,6 +137,11 @@
           name = "typst";
           auto-format = true;
           formatter.command = lib.getExe pkgs.typstyle;
+        }
+        {
+          name = "python";
+          auto-format = true;
+          formatter.command = lib.getExe pkgs.black;
         }
       ];
     };
