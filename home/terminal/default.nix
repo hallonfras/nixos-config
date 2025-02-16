@@ -20,6 +20,9 @@
     typstyle
     typst-live
 
+    # PDF tool
+    pdftk
+
     # Python formatter
     black
 
@@ -78,7 +81,7 @@
 
     # Settings for helix
     settings = {
-      theme = "gruvbox_material_dark_hard";
+      theme = "rose_pine_moon";
 
       editor = {
         scroll-lines = 1;
@@ -152,6 +155,7 @@
       nil
       yaml-language-server
       python312Packages.python-lsp-server
+      jdt-language-server
     ];
   };
 

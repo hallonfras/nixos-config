@@ -12,8 +12,12 @@
     # File manager
     nautilus
 
-    # Discord
+    # Disk manager
+    gnome-disk-utility
+
+    # Communication
     vesktop
+    slack
 
     # Image viewer
     sxiv
@@ -22,6 +26,7 @@
     inputs.zen-browser.packages."${pkgs.system}".default
 
     # Video player
+
     mpv
   ];
 

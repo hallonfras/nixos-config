@@ -4,7 +4,7 @@
   inputs,
   ...
 }: {
-  scheme = "${inputs.tt-schemes}/base16/everforest.yaml";
+  scheme = "${inputs.tt-schemes}/base16/rose-pine.yaml";
 
   # Theme ghostty
   xdg.configFile."ghostty/colors".text = with config.scheme; ''
@@ -492,7 +492,7 @@
 
 
     window-rule {
-        opacity 0.98
+        opacity 1
         draw-border-with-background false
         geometry-corner-radius 5
         clip-to-geometry true
@@ -502,7 +502,7 @@
     spawn-at-startup "swww-daemon"
     spawn-at-startup "swww restore"
     spawn-at-startup "xwayland-satellite"
-    spawn-at-startup "ags" "-d" "/home/isaac/.nixos-configuration/home/windowmanager/ags/config" "run" "--gtk4"
+    spawn-at-startup "ags" "run" "--gtk4"
 
 
     // Example: block out two password managers from screen capture.
@@ -531,6 +531,8 @@
         //brightness-controls
         XF86MonBrightnessUp { spawn "bash" "-c"  "xbacklight -inc 10"; }
         XF86MonBrightnessDown   { spawn "bash" "-c" "xbacklight -dec 10"; }
+
+        Mod+Shift+N { spawn "ags" "run" "--gtk4"; }
 
         // Mod-Shift-/, which is usually the same as Mod-?,
         // shows a list of important hotkeys.

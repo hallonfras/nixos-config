@@ -13,5 +13,11 @@
     gcc
     python39
     python312Packages.dbus-python
+    maven
+    zulu17
+    graphviz
+
+    # Visual editor
+    vscode
   ];
 }
