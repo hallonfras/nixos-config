@@ -4,7 +4,7 @@
   inputs,
   ...
 }: {
-  scheme = "${inputs.tt-schemes}/base16/rose-pine.yaml";
+  scheme = "${inputs.tt-schemes}/base16/grayscale-dark.yaml";
 
   # Theme ghostty
   xdg.configFile."ghostty/colors".text = with config.scheme; ''
@@ -380,7 +380,7 @@
     // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
     layout {
         // Set gaps around windows in logical pixels.
-        gaps 12
+        gaps 11
 
         // When to center a column when changing focus, options are:
         // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -492,7 +492,6 @@
 
 
     window-rule {
-        opacity 1
         draw-border-with-background false
         geometry-corner-radius 5
         clip-to-geometry true

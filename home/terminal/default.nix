@@ -37,6 +37,9 @@
 
     # Disk imager
     caligula
+
+    # Terminal text viewer
+    moar
   ];
 
   programs.git = {
@@ -81,7 +84,7 @@
 
     # Settings for helix
     settings = {
-      theme = "rose_pine_moon";
+      theme = "base16_default";
 
       editor = {
         scroll-lines = 1;

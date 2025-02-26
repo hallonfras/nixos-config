@@ -18,6 +18,7 @@
     graphviz
 
     # Visual editor
-    vscode
+    vscode-fhs
+    zed-editor
   ];
 }
