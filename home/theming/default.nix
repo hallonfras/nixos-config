@@ -436,6 +436,16 @@
 
         }
 
+        shadow {
+            on
+            softness 30
+            spread 5
+            offset x=0 y=5
+            draw-behind-window true
+            color "#00000070"
+            inactive-color "#00000054"
+        }
+
         // Struts shrink the area occupied by windows, similarly to layer-shell panels.
         // You can think of them as a kind of outer gaps. They are set in logical pixels.
         // Left and right struts will cause the next window to the side to always be visible.
