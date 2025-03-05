@@ -6,7 +6,6 @@
   ...
 }: {
   imports = [
-    ./hyprland
     ./niri
     ./walker
     ./waybar

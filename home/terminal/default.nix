@@ -64,6 +64,8 @@
     font-family-italic = Iosevka
     font-family-bold-italic = Iosevka
 
+    font-size = 14
+
     window-theme = auto
     window-title-font-family = Inter
 

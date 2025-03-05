@@ -26,8 +26,10 @@
     inputs.zen-browser.packages."${pkgs.system}".default
 
     # Video player
-
     mpv
+
+    # Display configurator
+    wdisplays
   ];
 
   # GTK Settings
