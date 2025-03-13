@@ -26,6 +26,12 @@
       url = "github:tinted-theming/schemes";
       flake = false;
     };
+
+    # Really cool helix colorscheme
+    melange = {
+      url = "github:DimitrisDimitropoulos/melange-helix";
+      flake = false;
+    };
   };
 
   outputs = inputs @ {
