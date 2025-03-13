@@ -4,7 +4,7 @@
   inputs,
   ...
 }: {
-  scheme = "${inputs.tt-schemes}/base16/grayscale-dark.yaml";
+  scheme = "${inputs.tt-schemes}/base16/grayscale-light.yaml";
 
   # Theme ghostty
   xdg.configFile."ghostty/colors".text = with config.scheme; ''

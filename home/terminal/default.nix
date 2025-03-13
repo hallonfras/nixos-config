@@ -22,6 +22,7 @@
 
     # PDF tool
     pdftk
+    pandoc
 
     # Python formatter
     black
