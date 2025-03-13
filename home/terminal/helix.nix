@@ -30,7 +30,7 @@
 
     # Settings for helix
     settings = {
-      theme = "base16_terminal";
+      theme = "melange-light";
 
       editor = {
         scroll-lines = 1;
