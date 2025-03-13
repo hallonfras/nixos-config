@@ -87,7 +87,7 @@
 
     # Settings for helix
     settings = {
-      theme = "base16_default";
+      theme = "base16_terminal";
 
       editor = {
         scroll-lines = 1;
