@@ -15,7 +15,7 @@
     ./schemes.nix
   ];
 
-  scheme = melange-light;
+  scheme = "${inputs.tt-schemes}/base16/grayscale-light.yaml";
 
   # Theme ghostty
   xdg.configFile."ghostty/colors".text = with config.scheme; ''
