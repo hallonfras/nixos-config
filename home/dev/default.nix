@@ -20,5 +20,8 @@
     # Visual editor
     vscode-fhs
     zed-editor
+
+    # Alternate version control system
+    jujutsu
   ];
 }

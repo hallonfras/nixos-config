@@ -4,7 +4,30 @@
   inputs,
   ...
 }: {
-  scheme = "${inputs.tt-schemes}/base16/grayscale-light.yaml";
+  home.packages = with pkgs; [
+    # Cool wallpaper colorizer
+    gowall
+  ];
+
+  scheme = (config.lib.base16.mkSchemeAttrs "${inputs.tt-schemes}/base16/grayscale-light.yaml").override {
+    scheme = "E-ink inspired theme (stolen from https://github.com/alexxGmZ/e-ink.nvim)";
+    base00 = "CCCCCC";
+    base01 = "C2C2C2";
+    base02 = "B8B8B8";
+    base03 = "AEAEAE";
+    base04 = "A4A4A4";
+    base05 = "9A9A9A";
+    base06 = "909090";
+    base07 = "868686";
+    base08 = "7C7C7C";
+    base09 = "727272";
+    base0A = "686868";
+    base0B = "5E5E5E";
+    base0C = "545454";
+    base0D = "4A4A4A";
+    base0E = "474747";
+    base0F = "333333";
+  };
 
   # Theme ghostty
   xdg.configFile."ghostty/colors".text = with config.scheme; ''
@@ -430,7 +453,7 @@
             // If you enable the border, you probably want to disable the focus ring.
             // off
 
-            width 2
+            width 1
             active-color "#${base09}"
             inactive-color "#${base03}"
 
