@@ -29,7 +29,7 @@
   #   base0F = "333333";
   # };
 
-  scheme = "https://github.com/EdenEast/nightfox.nvim/blob/main/extra/dawnfox/base16.yaml"
+  scheme = "${inputs.tt-schemes}/base16/solarized-light.yaml";
 
   # Theme ghostty
   xdg.configFile."ghostty/colors".text = with config.scheme; ''
@@ -456,8 +456,8 @@
             // off
 
             width 1
-            active-color "#${base09}"
-            inactive-color "#${base03}"
+            active-color "#${base04}"
+            inactive-color "#${base04}"
 
         }
 
