@@ -124,10 +124,15 @@
 
       # normal fonts
       inter
+      newcomputermodern
+      aileron
       noto-fonts-emoji
+      open-sans
+      libre-baskerville
 
       # Monospace font
       iosevka
+      fragment-mono
     ];
 
     # Install some default fonts as well

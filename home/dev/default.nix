@@ -23,5 +23,8 @@
 
     # Alternate version control system
     jujutsu
+
+    # Development environments
+    devenv
   ];
 }

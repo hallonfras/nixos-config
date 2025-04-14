@@ -4,6 +4,7 @@
   inputs,
   melange-light,
   melange-dark,
+  mellow,
   ...
 }: {
   home.packages = with pkgs; [
@@ -442,16 +443,16 @@
             // off
 
             width 1
-            active-color "#${base04}"
-            inactive-color "#${base04}"
+            active-color "#D3D3D3" //"#${base04}"
+            inactive-color "#D3D3D3"  // "#${base04}"
 
         }
 
         shadow {
             on
-            softness 30
-            spread 5
-            offset x=0 y=5
+            softness 20
+            spread 4
+            offset x=5 y=10
             draw-behind-window true
             color "#00000070"
             inactive-color "#00000054"
@@ -514,7 +515,7 @@
 
     window-rule {
         draw-border-with-background false
-        geometry-corner-radius 5
+        geometry-corner-radius 8
         clip-to-geometry true
     }
 

@@ -6,12 +6,11 @@ $bg-color: $base00;
 
 
 window.Bar {
-    font-family: "Iosevka";
+    font-family: "Aileron";
     font-size: 13px;
 
     background: transparent;
     color: $fg-color;
-    font-weight: bold;
     margin: 0px;
 
     active-window {
@@ -22,7 +21,7 @@ window.Bar {
         background: $bg-color;
         border-radius: 0px;
         margin: 0px;
-        padding: 3px 8px 3px 8px;
+        padding: 3px 11px 3px 11px;
     }
 
     button {

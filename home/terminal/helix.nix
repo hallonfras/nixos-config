@@ -11,15 +11,14 @@
     alejandra
 
     # Cool Nice document tool
-    typst
+    unstable.typst
     tinymist
     typstyle
     typst-live
   ];
 
   # Put themes in helix theme dir
-  xdg.configFile."helix/themes/melange.toml".source = "${inputs.melange}/melange.toml";
-  xdg.configFile."helix/themes/melange-light.toml".source = "${inputs.melange}/melange-light.toml";
+  xdg.configFile."helix/themes/alabaster.toml".source = "${inputs.alabaster}/alabaster.toml";
 
   # Configuration for helix text editor
   programs.helix = {
@@ -30,7 +29,7 @@
 
     # Settings for helix
     settings = {
-      theme = "melange-light";
+      theme = "adwaita-light";
 
       editor = {
         scroll-lines = 1;
@@ -89,6 +88,7 @@
           name = "typst";
           auto-format = true;
           formatter.command = lib.getExe pkgs.typstyle;
+          soft-wrap.enable = true;
         }
         {
           name = "python";

@@ -28,6 +28,12 @@
 
     # Terminal text viewer
     moar
+
+    # Terminal multiplexer
+    tmux
+
+    # X tool
+    xorg.xhost
   ];
 
   programs.git = {
@@ -47,12 +53,12 @@
 
     confirm-close-surface = false
 
-    font-family = Iosevka
-    font-family-bold = Iosevka
-    font-family-italic = Iosevka
-    font-family-bold-italic = Iosevka
+    font-family = Fragment Mono
+    font-family-bold = Fragment Mono
+    font-family-italic = Fragment Mono
+    font-family-bold-italic = Fragment Mono
 
-    font-size = 14
+    font-size = 12
 
     window-theme = auto
     window-title-font-family = Inter
@@ -60,6 +66,8 @@
     window-padding-color = extend
     window-padding-x = 6
     window-padding-y = 6
+
+    keybind = ctrl+w=close_surface
   '';
 
   # Yazi

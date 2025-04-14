@@ -20,7 +20,13 @@
     slack
 
     # Image viewer
-    sxiv
+    loupe
+
+    # Image Editor
+    gimp
+
+    # Font viewer
+    gnome-font-viewer
 
     # Browser
     inputs.zen-browser.packages."${pkgs.system}".default
@@ -30,6 +36,9 @@
 
     # Display configurator
     wdisplays
+
+    # Remote meetings
+    zoom
   ];
 
   # GTK Settings

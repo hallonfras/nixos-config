@@ -28,8 +28,8 @@
     };
 
     # Really cool helix colorscheme
-    melange = {
-      url = "github:DimitrisDimitropoulos/melange-helix";
+    alabaster = {
+      url = "github:beebeeep/helix-alabaster";
       flake = false;
     };
   };

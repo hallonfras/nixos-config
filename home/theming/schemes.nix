@@ -8,7 +8,7 @@
     base02 = "#6e9b72";
     base03 = "#bc5c00";
     base04 = "#7892bd";
-    base05 = "#be79bb";
+    base05 = "#54433A";
     base06 = "#739797";
     base07 = "#7d6658";
     base08 = "#a98a78";
@@ -41,5 +41,27 @@
     base0D = "cf9bc2";
     base0E = "89b3b6";
     base0F = "ece1d7";
+  };
+
+  _module.args.mellow = {
+    slug = "melange-dark";
+    scheme = "Melange dark, (taken from savq/melange-nvim)";
+    author = "savq";
+    base00 = "27272a";
+    base01 = "f5a191";
+    base02 = "90b99f";
+    base03 = "e6b99d";
+    base04 = "aca1cf";
+    base05 = "e29eca";
+    base06 = "ea83a5";
+    base07 = "c1c0d4";
+    base08 = "353539";
+    base09 = "ffae9f";
+    base0A = "9dc6ac";
+    base0B = "f0c5a9";
+    base0C = "b9aeda";
+    base0D = "ecaad6";
+    base0E = "f591b2";
+    base0F = "cac9dd";
   };
 }
