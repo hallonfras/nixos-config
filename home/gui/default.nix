@@ -38,7 +38,7 @@
     wdisplays
 
     # Remote meetings
-    zoom
+    unstable.zoom-us
   ];
 
   # GTK Settings

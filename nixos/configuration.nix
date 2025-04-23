@@ -60,8 +60,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  programs.hyprland.enable = true;
-
   programs.fish.enable = true;
 
   programs.bash = {
@@ -75,7 +73,7 @@
   };
 
   # What sessions are available
-  services.displayManager.sessionPackages = [pkgs.hyprland pkgs.niri];
+  services.displayManager.sessionPackages = [pkgs.niri];
 
   # Enable the GDM display manager
   services.xserver.displayManager.gdm = {
