@@ -72,8 +72,11 @@
     '';
   };
 
+  # temporarily enable gnome for presentation
+  services.xserver.desktopManager.gnome.enable = true;
+
   # What sessions are available
-  services.displayManager.sessionPackages = [pkgs.niri];
+  services.displayManager.sessionPackages = [pkgs.niri pkgs.gnome.gnome-session.sessions];
 
   # Enable the GDM display manager
   services.xserver.displayManager.gdm = {
@@ -90,6 +93,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     open = true;
     modesetting.enable = true;
+    powerManagement.enable = true;
 
     prime = {
       offload = {
@@ -127,6 +131,7 @@
       noto-fonts-emoji
       open-sans
       libre-baskerville
+      inriafonts
 
       # Monospace font
       iosevka
@@ -170,7 +175,8 @@
     description = "Isaac Westerman";
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-      #  thunderbird
+      pavucontrol # PulseAudio Volume Control
+      pamixer # Command-line mixer for PulseAudio
     ];
   };
 

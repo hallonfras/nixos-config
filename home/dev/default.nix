@@ -22,7 +22,7 @@
     zed-editor
 
     # Alternate version control system
-    jujutsu
+    unstable.jujutsu
 
     # Development environments
     devenv

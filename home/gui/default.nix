@@ -39,6 +39,12 @@
 
     # Remote meetings
     unstable.zoom-us
+
+    # Document viewer
+    okular
+
+    # Document presenter
+    pdfpc
   ];
 
   # GTK Settings
