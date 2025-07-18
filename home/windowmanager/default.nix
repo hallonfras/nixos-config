@@ -7,7 +7,7 @@
 }: {
   imports = [
     ./niri
-    ./walker
+    ./sherlock
     ./waybar
     ./ags
   ];

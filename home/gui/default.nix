@@ -41,7 +41,7 @@
     unstable.zoom-us
 
     # Document viewer
-    okular
+    evince
 
     # Document presenter
     pdfpc

@@ -72,11 +72,8 @@
     '';
   };
 
-  # temporarily enable gnome for presentation
-  services.xserver.desktopManager.gnome.enable = true;
-
   # What sessions are available
-  services.displayManager.sessionPackages = [pkgs.niri pkgs.gnome.gnome-session.sessions];
+  services.displayManager.sessionPackages = [pkgs.niri];
 
   # Enable the GDM display manager
   services.xserver.displayManager.gdm = {

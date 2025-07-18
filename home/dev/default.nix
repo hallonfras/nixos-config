@@ -11,8 +11,8 @@
   home.packages = with pkgs; [
     cargo
     gcc
-    python39
-    python312Packages.dbus-python
+    python314
+    python313Packages.dbus-python
     maven
     zulu17
     graphviz
