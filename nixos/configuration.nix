@@ -13,9 +13,19 @@
     ./containers.nix
   ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # Boot settings
+  boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+
+    extraModulePackages = [config.boot.kernelPackages.evdi];
+    initrd = {
+      # List of modules that are always loaded by the initrd.
+      kernelModules = [
+        "evdi"
+      ];
+    };
+  };
 
   networking.hostName = "pine"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -36,6 +46,10 @@
 
   # Set your time zone.
   time.timeZone = "Europe/Stockholm";
+
+  # enable location provider (used to adjust gamma for day and night)
+  services.geoclue2.enable = true;
+  services.geoclue2.geoProviderUrl = "https://api.beacondb.net/v1/geolocate";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -84,7 +98,7 @@
   services.gvfs.enable = true;
 
   # for Nvidia GPU
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = ["nvidia" "displaylink" "modesetting"];
   hardware.graphics.enable = true;
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.stable;
@@ -197,6 +211,7 @@
     helix # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
+    displaylink
   ];
 
   programs.git.config = {

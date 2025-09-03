@@ -17,9 +17,6 @@
     typst-live
   ];
 
-  # Put themes in helix theme dir
-  xdg.configFile."helix/themes/alabaster.toml".source = "${inputs.alabaster}/alabaster.toml";
-
   # Configuration for helix text editor
   programs.helix = {
     enable = true;
@@ -29,7 +26,7 @@
 
     # Settings for helix
     settings = {
-      theme = "adwaita-light";
+      theme = "monokai_pro";
 
       editor = {
         scroll-lines = 1;

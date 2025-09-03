@@ -8,7 +8,6 @@
   home.homeDirectory = "/home/isaac";
 
   imports = [
-    inputs.base16.homeManagerModule
     ./terminal
     ./gui
     ./windowmanager

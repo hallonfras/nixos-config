@@ -18,8 +18,8 @@ input {
             // For more information, see xkeyboard-config(7).
 
             // For example:
-		layout "se"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+		layout "se, us"
+        options "grp:win_space_toggle"
         }
     }
 
@@ -59,7 +59,7 @@ input {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
+output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
 
@@ -69,10 +69,10 @@ input {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@120.030"
+    mode "3840x2400@59.994"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
+    scale 2.25
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -87,7 +87,29 @@ input {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=1280 y=0
+    position x=0 y=0
+}
+
+
+// Config for ngenic work monitor
+output "PNP(WAM) VXD-O27QHDPF Unknown" {
+    mode "2560x1440@59.951"
+
+    scale 1.25
+
+    transform "normal"
+
+    position x=0 y=0
+
+}
+
+// Config for second ngenic monitor
+output "Dell Inc. DELL U2415 7MT0177R18GL" {
+    scale 1.25
+    
+    transform "90"
+
+    position x=2048 y=0
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -95,7 +117,7 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 10
+    gaps 11
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -145,10 +167,46 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         // off
 
-        width 2
-        active-color "#F99157"
-        inactive-color "#4F5B66"
+        width 1
+        active-color "#D3D3D3"
+        inactive-color "#D3D3D3"
 
+    }
+
+     shadow {
+        // Uncomment the next line to enable shadows.
+        // on
+
+        // By default, the shadow draws only around its window, and not behind it.
+        // Uncomment this setting to make the shadow draw behind its window.
+        //
+        // Note that niri has no way of knowing about the CSD window corner
+        // radius. It has to assume that windows have square corners, leading to
+        // shadow artifacts inside the CSD rounded corners. This setting fixes
+        // those artifacts.
+        //
+        // However, instead you may want to set prefer-no-csd and/or
+        // geometry-corner-radius. Then, niri will know the corner radius and
+        // draw the shadow correctly, without having to draw it behind the
+        // window. These will also remove client-side shadows if the window
+        // draws any.
+        //
+        // draw-behind-window true
+
+        // You can change how shadows look. The values below are in logical
+        // pixels and match the CSS box-shadow properties.
+
+        // Softness controls the shadow blur radius.
+        softness 300
+
+        // Spread expands the shadow.
+        spread 10
+
+        // Offset moves the shadow relative to the window.
+        offset x=0 y=40
+
+        // You can also change the shadow color and opacity.
+        color "#010101"
     }
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
@@ -207,18 +265,24 @@ window-rule {
 
 
 window-rule {
-    opacity 0.98
+    opacity 1.0
     draw-border-with-background false
     geometry-corner-radius 5
     clip-to-geometry true
+}
+
+
+window-rule {
+    match app-id="zoom"
+
+    open-floating true
 }
 
 // Autostarts
 spawn-at-startup "swww-daemon"
 spawn-at-startup "swww restore"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "ags" "-d" "/home/isaac/.nixos-configuration/home/windowmanager/ags/config" "run" "--gtk4"
-
+spawn-at-startup "gammastep" "-l" "geoclue2" "-t" "6500:4500"
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
@@ -244,8 +308,8 @@ binds {
     // `niri msg action do-something`.
 		
     //brightness-controls
-    XF86MonBrightnessUp { spawn "bash" "-c"  "xbacklight -inc 10"; }
-    XF86MonBrightnessDown   { spawn "bash" "-c" "xbacklight -dec 10"; }
+    XF86MonBrightnessUp { spawn "bash" "-c"  "brightnessctl s +10%"; }
+    XF86MonBrightnessDown   { spawn "bash" "-c" "brightnessctl s 10%-"; }
 
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
@@ -267,7 +331,9 @@ binds {
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    Mod+Q { close-window; }
+    Mod+O repeat=false { toggle-overview; }
+    
+    Mod+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }

@@ -30,6 +30,8 @@
 
     shellInit = ''
       set fish_greeting
+
+      bind ctrl-y yazi
     '';
   };
 

@@ -18,6 +18,12 @@
     # Zen browser flake
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
+    # Cool launcher
+    sherlock.url = "github:Skxxtz/sherlock";
+
+    # Alternate launcher
+    vicinae.url = "github:vicinaehq/vicinae";
+
     # Nix module for base16 theming
     base16.url = "github:SenchoPens/base16.nix";
 
@@ -32,6 +38,9 @@
       url = "github:beebeeep/helix-alabaster";
       flake = false;
     };
+
+    # Matugen material colors generator
+    matugen.url = "github:/InioX/Matugen";
   };
 
   outputs = inputs @ {

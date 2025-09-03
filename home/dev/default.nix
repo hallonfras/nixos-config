@@ -16,10 +16,12 @@
     maven
     zulu17
     graphviz
+    gnumake
+    jq
 
     # Visual editor
     vscode-fhs
-    zed-editor
+    unstable.zed-editor
 
     # Alternate version control system
     unstable.jujutsu

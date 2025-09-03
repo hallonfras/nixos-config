@@ -34,6 +34,9 @@
 
     # X tool
     xorg.xhost
+
+    # Nixos command line helper
+    nh
   ];
 
   programs.git = {

@@ -6,6 +6,10 @@
   ...
 }: {
   home.packages = with pkgs; [
-    sherlock-launcher
   ];
+
+  imports = [inputs.sherlock.homeModules.default];
+
+  programs.sherlock.enable = true;
+  programs.sherlock.settings = null;
 }

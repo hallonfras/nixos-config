@@ -1,0 +1,27 @@
+output "Lenovo Group Limited Y34wz-30 UK330115" {
+  mode 3440x1440 @ 59.973
+  position 0,0
+  scale 1.25
+  alias $HOME_ULTRAWIDE
+}
+
+output "Sharp Corporation 0x14D0 Unknown" {
+	mode 3840x2400@59.994
+	position 0,0
+	scale 2
+	alias $INTERNAL
+}
+
+
+profile {
+	output $HOME_ULTRAWIDE enable
+	output $INTERNAL disable
+
+	exec setwall /home/isaac/Pictures/wallpaper 
+}
+
+profile {
+	output $internal enable
+
+	exec setwall /home/isaac/Pictures/wallpaper 
+}
