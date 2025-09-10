@@ -41,7 +41,7 @@
     unstable.zoom-us
 
     # Document viewer
-    evince
+    papers
 
     # Document presenter
     pdfpc

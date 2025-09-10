@@ -70,6 +70,8 @@
     window-padding-x = 6
     window-padding-y = 6
 
+    window-inherit-working-directory = true
+
     keybind = ctrl+w=close_surface
   '';
 

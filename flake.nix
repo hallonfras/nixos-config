@@ -18,9 +18,6 @@
     # Zen browser flake
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
-    # Cool launcher
-    sherlock.url = "github:Skxxtz/sherlock";
-
     # Alternate launcher
     vicinae.url = "github:vicinaehq/vicinae";
 

@@ -19,6 +19,9 @@
     gnumake
     jq
 
+    # Intro-AI
+    rstudio
+
     # Visual editor
     vscode-fhs
     unstable.zed-editor

@@ -7,7 +7,6 @@
 }: {
   imports = [
     ./niri
-    ./sherlock
     ./vicinae
     ./waybar
     ./ags

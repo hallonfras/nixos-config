@@ -197,16 +197,16 @@ layout {
         // pixels and match the CSS box-shadow properties.
 
         // Softness controls the shadow blur radius.
-        softness 300
+        softness 40
 
         // Spread expands the shadow.
         spread 10
 
         // Offset moves the shadow relative to the window.
-        offset x=0 y=40
+        offset x=0 y=10
 
         // You can also change the shadow color and opacity.
-        color "#010101"
+        color "#00000050"
     }
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
@@ -219,6 +219,20 @@ layout {
         // right 12
         // top 12
         // bottom 12
+    }
+}
+
+// Overview configuration
+overview {
+    zoom 0.5
+    backdrop-color "#262626"
+
+    workspace-shadow {
+        // off
+        softness 40
+        spread 10
+        offset x=0 y=10
+        color "#00000050"
     }
 }
 
@@ -317,7 +331,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return { spawn "ghostty"; }
-    Mod+D { spawn "sherlock"; }
+    Mod+D { spawn "vicinae"; }
     Super+Alt+L { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.

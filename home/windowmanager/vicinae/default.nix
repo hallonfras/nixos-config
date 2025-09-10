@@ -8,7 +8,7 @@
   home.packages = with pkgs; [
   ];
 
-  imports = [inputs.vicinae.homeModules.default];
+  imports = [inputs.vicinae.homeManagerModules.default];
 
   services.vicinae = {
     enable = true; # default: false

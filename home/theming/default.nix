@@ -20,4 +20,12 @@
     # optional: overwrite existing file
     force = true;
   };
+
+  xdg.configFile."gtk-3.0/gtk.css" = {
+    text = "@import 'colors.css';";
+  };
+
+  xdg.configFile."gtk-4.0/gtk.css" = {
+    text = "@import 'colors.css';";
+  };
 }
