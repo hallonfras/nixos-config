@@ -9,6 +9,6 @@
     ./niri
     ./vicinae
     ./waybar
-    ./ags
+    ./bar
   ];
 }

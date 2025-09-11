@@ -15,6 +15,18 @@
     # Aylur's gtk shell, for widgets
     ags.url = "github:aylur/ags";
 
+    # Noctalia and quickshell are for the bar
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";
+    };
+
     # Zen browser flake
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
